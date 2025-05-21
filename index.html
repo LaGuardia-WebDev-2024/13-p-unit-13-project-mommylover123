@@ -28,9 +28,9 @@ Select ONE Additional Feature to Add
       <label>
         🎥 What is my favorite movie?
         <select id="movie-answer">
-          <option value="movie1">movie 1</option>
-          <option value="movie2">movie 2</option>
-          <option value="movie3">movie 3</option>
+          <option value="movie1">The Lego Movie</option>
+          <option value="movie2">Transformers 1</option>
+          <option value="movie3">Minecraft Movie</option>
           <option value="movie4">movie 4</option>
         </select>
       </label>
@@ -38,20 +38,24 @@ Select ONE Additional Feature to Add
     </form>
     <div id="movie-result"></div>
     <hr />
-    <!-- Book Question -->
-    <form id="book-form">
+    <!-- Game  Question -->
+    <form id="game-form">
       <label>
-        📖 What is my favorite book?
-        <select id="book-answer">
-          <option value="book1">book 1</option>
-          <option value="book2">book 2</option>
-          <option value="book3">book 3</option>
-          <option value="book4">book 4</option>
+        🎮 What is my favorite game?
+        <select id="game-answer">
+          <option value="game1">FH4</option>
+
+          <option value="game2">Roblox</option>
+          <option value="game3">c</option>
+          <option value="game4">Persona series</option>
         </select>
       </label>
-      <button type="submit">Check Book Answer</button>
+      <button type="submit">Check Game Answer</button>
     </form>
-    <div id="book-result"></div>
+    <div id="game-result"></div>
+
+    <img id="game-img" />
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script>
       //Movie Question jQuery Code
@@ -63,22 +67,37 @@ Select ONE Additional Feature to Add
 
         if (answer === "movie1") {
           $("#movie-result").text("YESSSS!");
+
+          $("#movie-img").attr(
+            "src",
+            "https://wallpapers.com/images/hd/cool-the-lego-movie-poster-v7o2vybdleu45fba.jpg"
+          );
         } else {
           $("#movie-result").text("Try Again!");
         }
       });
 
-      //Book Question jQuery Code
-      $("#book-form").on("submit", function (event) {
+      //Game Question jQuery Code
+      $("#game-form").on("submit", function (event) {
         event.preventDefault();
 
-        var $answer = $("#book-answer");
+        var $answer = $("#game-answer");
         var answer = $answer.val();
 
-        if (answer === "book1") {
-          $("#book-result").text("YESSSS!");
+        if (answer === "game1") {
+          $("#game-result").text("YESSSS!");
+
+          $("#game-img").attr(
+            "src",
+            "https://upload.wikimedia.org/wikipedia/en/thumb/8/87/Forza_Horizon_4_cover.jpg/250px-Forza_Horizon_4_cover.jpg"
+          );
         } else {
-          $("#book-result").text("Try Again!");
+          $("#game-result").text("Try Again!");
+   
+          $("game-img").attr 
+        
+        
+        
         }
       });
     </script>
